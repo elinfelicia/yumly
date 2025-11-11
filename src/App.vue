@@ -1,9 +1,11 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import Header from '@/components/Header.vue'
 </script>
 
 <template>
   <div id="app">
+    <Header />
     <RouterView />
   </div>
 </template>
@@ -16,7 +18,7 @@ import { RouterView } from 'vue-router'
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Roboto, sans-serif;
   background-color: #f5f5f5;
   color: #2c3e50;
 }
