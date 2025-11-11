@@ -1,0 +1,354 @@
+// Mock recipe data
+export const categories = [
+  { id: 1, name: 'Desserts', slug: 'desserts' },
+  { id: 2, name: 'Main Courses', slug: 'main-courses' },
+  { id: 3, name: 'Appetizers', slug: 'appetizers' },
+  { id: 4, name: 'Vegetarian', slug: 'vegetarian' },
+  { id: 5, name: 'Breakfast', slug: 'breakfast' },
+]
+
+export const recipes = [
+  {
+    id: 1,
+    name: 'Chocolate Chip Cookies',
+    categoryId: 1,
+    categorySlug: 'desserts',
+    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop',
+    rating: 4.5,
+    cookingTime: 25,
+    ingredientsCount: 9,
+    description: 'Classic homemade chocolate chip cookies that are soft, chewy, and loaded with chocolate chips. Perfect for any occasion!',
+    steps: [
+      'Preheat oven to 375°F (190°C)',
+      'Mix butter, sugar, and vanilla until creamy',
+      'Add eggs and mix well',
+      'Gradually add flour, baking soda, and salt',
+      'Stir in chocolate chips',
+      'Drop rounded tablespoons onto ungreased baking sheets',
+      'Bake for 9-11 minutes until golden brown',
+      'Cool on baking sheet for 2 minutes, then transfer to wire rack'
+    ],
+    ingredients: [
+      '2 1/4 cups all-purpose flour',
+      '1 teaspoon baking soda',
+      '1 teaspoon salt',
+      '1 cup butter, softened',
+      '3/4 cup granulated sugar',
+      '3/4 cup packed brown sugar',
+      '2 large eggs',
+      '2 teaspoons vanilla extract',
+      '2 cups chocolate chips'
+    ],
+    comments: []
+  },
+  {
+    id: 2,
+    name: 'Grilled Salmon with Vegetables',
+    categoryId: 2,
+    categorySlug: 'main-courses',
+    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop',
+    rating: 4.8,
+    cookingTime: 30,
+    ingredientsCount: 7,
+    description: 'Healthy and delicious grilled salmon served with a medley of fresh vegetables. A perfect weeknight dinner!',
+    steps: [
+      'Preheat grill to medium-high heat',
+      'Season salmon fillets with salt, pepper, and lemon juice',
+      'Brush vegetables with olive oil and season',
+      'Place salmon on grill, skin-side down',
+      'Grill for 5-6 minutes per side',
+      'Grill vegetables until tender',
+      'Serve salmon with vegetables and lemon wedges'
+    ],
+    ingredients: [
+      '4 salmon fillets',
+      '2 tablespoons olive oil',
+      '1 lemon',
+      '1 bell pepper',
+      '1 zucchini',
+      '1 red onion',
+      'Salt and pepper to taste'
+    ],
+    comments: []
+  },
+  {
+    id: 3,
+    name: 'Caprese Salad',
+    categoryId: 3,
+    categorySlug: 'appetizers',
+    image: 'https://images.unsplash.com/photo-1572441713132-51c75654db73?w=400&h=300&fit=crop',
+    rating: 4.7,
+    cookingTime: 10,
+    ingredientsCount: 5,
+    description: 'Fresh and simple Italian salad with tomatoes, mozzarella, and basil. A classic summer appetizer!',
+    steps: [
+      'Slice tomatoes and mozzarella into 1/4 inch slices',
+      'Arrange tomato and mozzarella slices on a plate, alternating',
+      'Tuck fresh basil leaves between slices',
+      'Drizzle with olive oil and balsamic vinegar',
+      'Season with salt and pepper',
+      'Serve immediately'
+    ],
+    ingredients: [
+      '4 large tomatoes',
+      '1 pound fresh mozzarella',
+      '1/4 cup fresh basil leaves',
+      '3 tablespoons olive oil',
+      '2 tablespoons balsamic vinegar'
+    ],
+    comments: []
+  },
+  {
+    id: 4,
+    name: 'Vegetarian Pad Thai',
+    categoryId: 4,
+    categorySlug: 'vegetarian',
+    image: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?w=400&h=300&fit=crop',
+    rating: 4.6,
+    cookingTime: 20,
+    ingredientsCount: 12,
+    description: 'A flavorful vegetarian version of the classic Thai noodle dish, packed with vegetables and tofu.',
+    steps: [
+      'Soak rice noodles in warm water for 30 minutes',
+      'Heat oil in a large wok or pan',
+      'Add tofu and cook until golden',
+      'Add garlic and vegetables, stir-fry for 2 minutes',
+      'Push everything to one side, add eggs if using',
+      'Add drained noodles and sauce',
+      'Toss everything together',
+      'Garnish with peanuts, lime, and cilantro'
+    ],
+    ingredients: [
+      '8 oz rice noodles',
+      '1 block firm tofu',
+      '2 eggs (optional)',
+      '2 cups bean sprouts',
+      '1 carrot, julienned',
+      '3 green onions',
+      '2 cloves garlic',
+      '3 tablespoons soy sauce',
+      '2 tablespoons lime juice',
+      '1 tablespoon brown sugar',
+      '1/4 cup peanuts',
+      'Fresh cilantro'
+    ],
+    comments: []
+  },
+  {
+    id: 5,
+    name: 'Avocado Toast',
+    categoryId: 5,
+    categorySlug: 'breakfast',
+    image: 'https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop',
+    rating: 4.4,
+    cookingTime: 5,
+    ingredientsCount: 5,
+    description: 'Simple and nutritious breakfast toast topped with mashed avocado, perfect for a quick morning meal.',
+    steps: [
+      'Toast bread slices until golden',
+      'Cut avocado in half and remove pit',
+      'Scoop out avocado flesh into a bowl',
+      'Mash avocado with fork, add lime juice and salt',
+      'Spread avocado mixture on toast',
+      'Top with red pepper flakes and optional toppings'
+    ],
+    ingredients: [
+      '2 slices whole grain bread',
+      '1 ripe avocado',
+      '1/2 lime, juiced',
+      'Pinch of salt',
+      'Red pepper flakes (optional)'
+    ],
+    comments: []
+  },
+  {
+    id: 6,
+    name: 'Tiramisu',
+    categoryId: 1,
+    categorySlug: 'desserts',
+    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop',
+    rating: 4.9,
+    cookingTime: 240,
+    ingredientsCount: 8,
+    description: 'Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream. Absolutely divine!',
+    steps: [
+      'Brew strong coffee and let cool',
+      'Separate eggs, beat yolks with sugar',
+      'Mix in mascarpone cheese',
+      'Beat egg whites until stiff peaks',
+      'Fold egg whites into mascarpone mixture',
+      'Dip ladyfingers in coffee briefly',
+      'Layer ladyfingers and cream in dish',
+      'Refrigerate for at least 4 hours',
+      'Dust with cocoa powder before serving'
+    ],
+    ingredients: [
+      '1 cup strong coffee, cooled',
+      '3 eggs',
+      '1/2 cup sugar',
+      '1 pound mascarpone cheese',
+      '24 ladyfinger cookies',
+      'Cocoa powder',
+      'Dark chocolate shavings',
+      '2 tablespoons coffee liqueur (optional)'
+    ],
+    comments: []
+  },
+  {
+    id: 7,
+    name: 'Beef Stroganoff',
+    categoryId: 2,
+    categorySlug: 'main-courses',
+    image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400&h=300&fit=crop',
+    rating: 4.7,
+    cookingTime: 40,
+    ingredientsCount: 10,
+    description: 'Rich and creamy Russian dish with tender beef, mushrooms, and sour cream. Comfort food at its finest!',
+    steps: [
+      'Slice beef into thin strips',
+      'Season beef with salt and pepper',
+      'Heat oil in a large pan, brown beef',
+      'Remove beef, add onions and mushrooms',
+      'Cook until vegetables are tender',
+      'Add flour and stir',
+      'Add beef broth and bring to boil',
+      'Return beef to pan, simmer',
+      'Stir in sour cream and serve over noodles'
+    ],
+    ingredients: [
+      '1.5 pounds beef sirloin',
+      '2 tablespoons flour',
+      '1 onion, sliced',
+      '8 oz mushrooms, sliced',
+      '2 cups beef broth',
+      '1 cup sour cream',
+      '2 tablespoons butter',
+      '1 tablespoon Worcestershire sauce',
+      'Egg noodles',
+      'Fresh parsley'
+    ],
+    comments: []
+  },
+  {
+    id: 8,
+    name: 'Bruschetta',
+    categoryId: 3,
+    categorySlug: 'appetizers',
+    image: 'https://images.unsplash.com/photo-1572441713132-51c75654db73?w=400&h=300&fit=crop',
+    rating: 4.5,
+    cookingTime: 15,
+    ingredientsCount: 7,
+    description: 'Italian appetizer with toasted bread topped with fresh tomatoes, garlic, and basil. Perfect for parties!',
+    steps: [
+      'Dice tomatoes and place in bowl',
+      'Add minced garlic and chopped basil',
+      'Drizzle with olive oil and balsamic',
+      'Season with salt and pepper',
+      'Mix gently and let marinate',
+      'Toast bread slices until crispy',
+      'Rub with garlic clove',
+      'Top with tomato mixture',
+      'Serve immediately'
+    ],
+    ingredients: [
+      '6 tomatoes',
+      '3 cloves garlic',
+      '1/4 cup fresh basil',
+      '3 tablespoons olive oil',
+      '1 tablespoon balsamic vinegar',
+      '1 baguette',
+      'Salt and pepper'
+    ],
+    comments: []
+  },
+  {
+    id: 9,
+    name: 'Vegetable Curry',
+    categoryId: 4,
+    categorySlug: 'vegetarian',
+    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop',
+    rating: 4.6,
+    cookingTime: 35,
+    ingredientsCount: 11,
+    description: 'Aromatic and flavorful vegetable curry with a perfect blend of spices. Healthy and satisfying!',
+    steps: [
+      'Heat oil in a large pot',
+      'Add onions and cook until soft',
+      'Add garlic and ginger, cook for 1 minute',
+      'Add curry powder and spices',
+      'Add vegetables and stir',
+      'Add coconut milk and tomatoes',
+      'Bring to boil, then simmer',
+      'Cook until vegetables are tender',
+      'Serve over rice with cilantro'
+    ],
+    ingredients: [
+      '2 tablespoons vegetable oil',
+      '1 onion, diced',
+      '3 cloves garlic',
+      '1 inch ginger',
+      '2 tablespoons curry powder',
+      '1 can coconut milk',
+      '1 can diced tomatoes',
+      '2 cups mixed vegetables',
+      '1 teaspoon turmeric',
+      'Cooked rice',
+      'Fresh cilantro'
+    ],
+    comments: []
+  },
+  {
+    id: 10,
+    name: 'Pancakes',
+    categoryId: 5,
+    categorySlug: 'breakfast',
+    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop',
+    rating: 4.8,
+    cookingTime: 20,
+    ingredientsCount: 8,
+    description: 'Fluffy and light pancakes, perfect for a weekend breakfast. Serve with maple syrup and fresh berries!',
+    steps: [
+      'Mix flour, sugar, baking powder, and salt',
+      'In another bowl, mix milk, eggs, and butter',
+      'Combine wet and dry ingredients',
+      'Don\'t overmix, lumps are okay',
+      'Heat griddle or pan over medium heat',
+      'Pour batter onto griddle',
+      'Cook until bubbles form',
+      'Flip and cook until golden',
+      'Serve with syrup and toppings'
+    ],
+    ingredients: [
+      '1 1/2 cups flour',
+      '3 1/2 teaspoons baking powder',
+      '1 teaspoon salt',
+      '1 tablespoon sugar',
+      '1 1/4 cups milk',
+      '1 egg',
+      '3 tablespoons melted butter',
+      'Maple syrup and berries'
+    ],
+    comments: []
+  }
+]
+
+// Get recipes by category
+export function getRecipesByCategory(categorySlug) {
+  return recipes.filter(recipe => recipe.categorySlug === categorySlug)
+}
+
+// Get recipe by id
+export function getRecipeById(id) {
+  return recipes.find(recipe => recipe.id === id)
+}
+
+// Get category by slug
+export function getCategoryBySlug(slug) {
+  return categories.find(cat => cat.slug === slug)
+}
+
+// Get recipe count by category
+export function getRecipeCountByCategory(categoryId) {
+  return recipes.filter(recipe => recipe.categoryId === categoryId).length
+}
+
