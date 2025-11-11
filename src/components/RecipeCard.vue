@@ -1,10 +1,10 @@
 <script setup>
-    defineProps({
-        recipe: {
-            type: Object,
-            required: true
-        }
-    })
+defineProps({
+    recipe: {
+        type: Object,
+        required: true
+    }
+})
 </script>
 
 <template>

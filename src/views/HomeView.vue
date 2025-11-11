@@ -1,14 +1,34 @@
 <script setup>
+    import { ref, computed } from 'vue'
     import { recipes } from '../data/mockRecipes.js'
     import RecipeCard from '../components/RecipeCard.vue'
+    import Searchbar from '../components/Searchbar.vue'
+
+    const searchQuery = ref('');
+    const filteredRecipes = computed (() => {
+      const query = searchQuery.value.trim().toLowerCase()
+
+      if (!query) {
+        return recipes;
+      }
+      return recipes.filter(recipe => {
+        return (
+          recipe.name.toLowerCase().includes(query) ||
+          recipe.description.toLowerCase().includes(query) ||
+          recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query)) ||
+          recipe.steps.some(step => step.toLowerCase().includes(query))
+        );
+      });
+    });
+    
 </script>
 
 <template>
   <div class="home-view">
     <h1>Yumly - Recipe Collection</h1>
-    <p>Collecting yummy recipes!</p>
+    <Searchbar v-model="searchQuery" />
     <div class="recipes-list">
-      <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
+      <RecipeCard v-for="recipe in filteredRecipes" :key="recipe.id" :recipe="recipe" />
     </div>
   </div>
 </template>
