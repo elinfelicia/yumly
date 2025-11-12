@@ -2,7 +2,8 @@
     import { ref, computed } from 'vue'
     import { recipes } from '../data/mockRecipes.js'
     import RecipeCard from '../components/RecipeCard.vue'
-    import Searchbar from '../components/Searchbar.vue'
+    import Searchbar from '../components/SearchBar.vue'
+    import CategoryList from '../components/CategoryList.vue'
 
     const searchQuery = ref('');
     const filteredRecipes = computed (() => {
@@ -27,8 +28,11 @@
   <div class="home-view">
     <h1>Yumly - Recipe Collection</h1>
     <Searchbar v-model="searchQuery" />
-    <div class="recipes-list">
-      <RecipeCard v-for="recipe in filteredRecipes" :key="recipe.id" :recipe="recipe" />
+    <div class="main-content">
+      <div class="recipes-list">
+        <RecipeCard v-for="recipe in filteredRecipes" :key="recipe.id" :recipe="recipe" />
+      </div>
+      <CategoryList />
     </div>
   </div>
 </template>
@@ -45,11 +49,18 @@ h1 {
   color: #2c3e50;
 }
 
+.main-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
 .recipes-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
+  flex: 1;
 }
 
 </style>

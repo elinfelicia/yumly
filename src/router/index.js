@@ -9,7 +9,12 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-  ],
-})
+    {
+      path: '/category/:categorySlug',
+      name: 'category',
+      component: () => import('../views/CategoryView.vue'),
+    }
+  ]
+});
 
 export default router
